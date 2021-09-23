@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/fristpage.css' %}">
+    <title>Fristpage</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>wellcome to random password generator application</h1>
+        <form action="{% url 'password' %}">
+            <label for="length"> Length </label>
+            <select name="Length" id="length">
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="10" selected>10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+            </select>
+            <br><br>
+
+            upper <input type="checkbox" name="upper" id=""> <br> <br>
+            Symbol <input type="checkbox" name="symbol" id=""> <br> <br>
+            Numbers <input type="checkbox" name="numbers" id=""> <br> <br>
+            <input type="submit" value="Get-password">
+        </form>
+    </div>
+</body>
+
+</html>
